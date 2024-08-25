@@ -9,6 +9,8 @@ const app=express();
 app.use(express.json())
 app.use(cors({origin:"*"}))
 
+const port=4000;
+
 
 
 mangoose.connect("mongodb+srv://15072cm031:Vineeth123@cluster0.yx49o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(
@@ -167,6 +169,6 @@ app.get('/blogs', async (req, res) => {
   });*/
 
 
-app.listen(4000,()=>{
+app.listen(port,()=>{
     console.log("server running");
 })
