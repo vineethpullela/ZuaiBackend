@@ -98,15 +98,15 @@ app.get('/blogs', async (req, res) => {
   });
   
   // GET /posts/:id (Get a specific post)
-  /*app.get('/:id', async (req, res) => {
+  app.get('/blogs/:id', async (req, res) => {
     try {
-      const post = await Post.findById(req.params.id);
+      const post = await Blogs.findById(req.params.id);
       if (!post) return res.status(404).json({ message: 'Post not found' });
       res.json(post);
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
-  });*/
+  });
   
   // POST /posts (Create a new post)
   app.post('/createpost', async (req, res) => {
